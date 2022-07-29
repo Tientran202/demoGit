@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color: #de1354">Tʈɧʉͼ✿ɖσɳ亗</h2>
+<ol style="color: #886e4c">
+    <li>Cafe: 20K</li>
+    <li>Cam vắt: 40K</li>
+    <li>Nước ép cà rốt: 80K</li>
+    <li>Nước ép cà chua: 90K</li>
+    <li>Nước lọc: 20K</li>
+    <li>Nước dừa: 15K</li>
+    <li>Thoat</li>
+</ol>
+<label>Nhap lua chon</label>
+<input type="text" id="lc" >
+<br>
+<br>
+<label>Nhap so luong</label>
+<input type="text" id="sl">
+<br>
+<br>
+&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160
+<input style="color: #de1354; background: pink"  type="button" value="TINH TIEN" onclick="tt()">
+<input style="color: #de1354; background: coral" type="button" value="RESERT" onclick="rs()">
+    <h1 style="color: green">&#160&#160&#160&#160&#160&#160&#160HÓA ĐƠN</h1>
+    <table border="5px">
+        <tr>
+            <th>Loại đồ uống</th>
+            <th>Số lượng</th>
+            <th>Đon giá</th>
+            <th>Tổng tiền</th>
+        </tr>
+        <tr>
+            <td><p id="tt3"></p></td>
+            <td><p id="tt"></p></td>
+            <td> <p id="tt2"></p></td>
+            <td>  <p id="tt1"></p></td>
+        </tr>
+    </table>
+<script>
+    function tt(){
+        let lc= +document.getElementById("lc").value;
+        let sl= +document.getElementById("sl").value;
+        let tt;
+        do{
+            if(lc==""||sl=="")
+            {
+                alert("vui long nhap day du thong tin   ");
+                document.getElementById("lc").focus();
+            }else if(lc!=+lc||sl!=+sl)
+            {
+                alert("chi duoc nhap so");
+                rs();
+                document.getElementById("lc").focus();
+            }else
+            {
+                switch(lc){
+                    case 1:
+                        tt=20*sl;
+                        document.getElementById("tt3").innerText= "Cafe" ;
+                        document.getElementById("tt").innerText= sl.toString() ;
+                        document.getElementById("tt2").innerText="20K ";
+                        document.getElementById("tt1").innerText= tt+"k";
+                        break;
+                    case 2:
+                        tt=40*sl;
+                        document.getElementById("tt3").innerText= "Cam vắt" ;
+                        document.getElementById("tt").innerText=sl.toString();
+                        document.getElementById("tt2").innerText="40K ";
+                        document.getElementById("tt1").innerText=tt+"k";
+                        break;
+                    case 3:
+                        tt=80*sl;
+                        document.getElementById("tt3").innerText= "Nước ép cà rốt" ;
+                        document.getElementById("tt").innerText=sl.toString();
+                        document.getElementById("tt2").innerText="80K ";
+                        document.getElementById("tt1").innerText=tt+"k";
+                        break;
+                    case 4:
+                        tt=90*sl;
+                        document.getElementById("tt3").innerText= "Nước ép cà chua" ;
+                        document.getElementById("tt").innerText=sl.toString();
+                        document.getElementById("tt2").innerText="90K ";
+                        document.getElementById("tt1").innerText=tt+"k";
+                        break;
+                    case 5:
+                        tt=20*sl;
+                        document.getElementById("tt3").innerText= "Nước lọc" ;
+                        document.getElementById("tt").innerText=sl.toString();
+                        document.getElementById("tt2").innerText="20K ";
+                        document.getElementById("tt1").innerText=tt+"k";
+                        break;
+                    case 6:
+                        tt=15*sl;
+                        document.getElementById("tt3").innerText= "Nước dừa" ;
+                        document.getElementById("tt").innerText=sl.toString();
+                        document.getElementById("tt2").innerText="15K ";
+                        document.getElementById("tt1").innerText=tt+"k";
+                        break;
+                }
+            }
+            }while(lc==7)
+    }
+    function rs() {
+       document.getElementById("lc").value="";
+        document.getElementById("sl").value="";
+        document.getElementById("tt3").innerText="";
+        document.getElementById("tt").innerText="";
+        document.getElementById("tt2").innerText="";
+        document.getElementById("tt1").innerText="";
+        document.getElementById("lc").focus();
+    }
+</script>
+</body>
+</html>
